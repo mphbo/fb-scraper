@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon",
+    "start": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "types": "module",
   "dependencies": {
     "puppeteer": "^20.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "nodemon": "^2.0.22",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
